@@ -1,0 +1,36 @@
+From fa43c4cf599414b1572ad69a4d1c841c9e8dd94b Mon Sep 17 00:00:00 2001
+From: "Dougal J. Sutherland" <dougal@gmail.com>
+Date: Wed, 3 Jan 2018 14:09:03 +0000
+Subject: [PATCH] inline version of fmax
+
+This is essentially a backported version of https://github.com/scikit-garden/scikit-garden/pull/44 (note that `fmin` isn't used in this version)
+---
+ skgarden/mondrian/tree/_tree.pyx | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/skgarden/mondrian/tree/_tree.pyx b/skgarden/mondrian/tree/_tree.pyx
+index 241cce4..613d1e6 100644
+--- a/skgarden/mondrian/tree/_tree.pyx
++++ b/skgarden/mondrian/tree/_tree.pyx
+@@ -19,7 +19,6 @@
+ from cpython cimport Py_INCREF, PyObject
+ 
+ from libc.math cimport exp
+-from libc.math cimport fmax
+ from libc.math cimport sqrt
+ from libc.stdlib cimport free
+ from libc.stdlib cimport malloc
+@@ -85,6 +84,10 @@ NODE_DTYPE = np.dtype({
+     ]
+ })
+ 
++cdef inline double fmax(double left, double right) nogil:
++    return left if left > right else right
++
++
+ # =============================================================================
+ # TreeBuilder
+ # =============================================================================
+-- 
+2.7.4
+

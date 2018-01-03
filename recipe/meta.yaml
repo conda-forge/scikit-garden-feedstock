@@ -1,6 +1,7 @@
 {% set name = "scikit-garden" %}
 {% set version = "0.1.3" %}
 {% set sha256 = "d6fe65205f39633f17c181f552a0fc56e2f05bb2096be63f38c160fe20718d9d" %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -10,12 +11,13 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  # Until scikit-garden releases the current version, this patch is required to build.
   patches:
-    - dev.patch
+    # These patches are needed to build on Windows; will be in next release.
+    - inline-fmax.patch  # https://github.com/scikit-garden/scikit-garden/pull/44
+    - setuptools.patch  # https://github.com/scikit-garden/scikit-garden/pull/49
 
 build:
-  number: 0
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -44,8 +46,8 @@ test:
 
 about:
   home: https://scikit-garden.github.io/
-  # license file should be included in the new version.
-  license_file: LICENSE.txt
+  # In next release: https://github.com/scikit-garden/scikit-garden/pull/47
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
   license: BSD 3-Clause
   license_family: BSD
   summary: 'A garden for scikit-learn compatible trees'
@@ -56,3 +58,4 @@ extra:
   recipe-maintainers:
     - pmlandwehr
     - ukaratay
+    - dougalsutherland
