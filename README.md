@@ -14,14 +14,16 @@ Summary: A garden for scikit-learn compatible trees
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/scikit-garden-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scikit-garden-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/scikit-garden-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/scikit-garden-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/scikit-garden-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/scikit-garden-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/scikit-garden-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/scikit-garden-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/scikit-garden-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/scikit-garden-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/scikit-garden-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/scikit-garden-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scikit-garden/badges/version.svg)](https://anaconda.org/conda-forge/scikit-garden)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scikit-garden/badges/downloads.svg)](https://anaconda.org/conda-forge/scikit-garden)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scikit--garden-green.svg)](https://anaconda.org/conda-forge/scikit-garden) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scikit-garden.svg)](https://anaconda.org/conda-forge/scikit-garden) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scikit-garden.svg)](https://anaconda.org/conda-forge/scikit-garden) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scikit-garden.svg)](https://anaconda.org/conda-forge/scikit-garden) |
 
 Installing scikit-garden
 ========================
