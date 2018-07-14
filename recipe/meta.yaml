@@ -25,15 +25,11 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy        # [not (win and (py35 or py36))]
-    - numpy        # [win and py35]
-    - numpy         # [win and py36]
+    - numpy
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
-    - {{ pin_compatible('numpy') }}   # [win and py35]
-    - {{ pin_compatible('numpy') }}   # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - scipy
     - scikit-learn >=0.18
 
