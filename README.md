@@ -219,5 +219,4 @@ Feedstock Maintainers
 =====================
 
 * [@pmlandwehr](https://github.com/pmlandwehr/)
-* [@ukaratay](https://github.com/ukaratay/)
 
